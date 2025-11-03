@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 
 public class Mesto1Test {
 
@@ -36,6 +37,11 @@ public class Mesto1Test {
 
         likePhotoById(photoId);
         deleteLikePhotoById(photoId);
+    }
+
+    @Test
+    public void failTest() {
+        assertEquals(3, 4);
     }
 
     @Step("Take the first photo from the list")
